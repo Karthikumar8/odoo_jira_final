@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-orange: #ff771c;
+  --brand-orange-hover: #e85f00;
+  --brand-orange-light: #fff0e6;
+  --brand-offwhite: #f5ede0;
+  --brand-black: #161311;
+  --brand-blue: #546877;
+  --brand-blue-light: #e8edf0;
+}
+
+@layer base {
+  html, body {
+    @apply antialiased;
+    background-color: var(--brand-offwhite);
+    color: var(--brand-black);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white rounded-md shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400;
+    background-color: var(--brand-orange);
+  }
+  .btn-primary:hover {
+    background-color: var(--brand-orange-hover);
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-md border shadow-sm transition-colors focus:outline-none;
+    border-color: #d1d5db;
+    color: var(--brand-black);
+    background-color: white;
+  }
+  .btn-secondary:hover {
+    background-color: var(--brand-offwhite);
+  }
+  .tab-active {
+    border-bottom-color: var(--brand-orange);
+    color: var(--brand-orange);
+  }
+}
